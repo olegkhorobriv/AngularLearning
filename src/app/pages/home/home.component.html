@@ -1,0 +1,9 @@
+<custom-page-header [header]="header"></custom-page-header>
+
+<app-items-table [displayedColumns]="displayedColumns" [dataSource]="dataSource"></app-items-table>
+
+<div style="margin-top: 2rem">
+  <button mat-mini-fab color="primary" [routerLink]="['/add-item']">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

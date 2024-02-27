@@ -1,0 +1,15 @@
+:host {
+  mat-card-title {
+    margin: 1rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  mat-card {
+    margin: 2rem;
+    width: 90vw;
+    min-height: 60vh;
+  }
+}

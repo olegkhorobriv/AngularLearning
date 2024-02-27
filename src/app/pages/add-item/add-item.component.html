@@ -1,0 +1,31 @@
+<custom-page-header [header]="header"></custom-page-header>
+
+<section>
+  <div class="mb-1rem">
+    <app-list #typeList [list]="types" (result)="typeSelected($event)"></app-list>
+  </div>
+
+  <form [formGroup]="form">
+    <div class="mb-1rem">
+      <mat-form-field appearance="outline">
+        <mat-label>Назва</mat-label>
+        <input matInput placeholder="" formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <div class="mb-1rem">
+      <mat-form-field appearance="outline">
+        <mat-label>Кількість</mat-label>
+        <input matInput placeholder="" type="number" formControlName="quantity">
+      </mat-form-field>
+    </div>
+  </form>
+
+  <mat-slide-toggle [(ngModel)]="toBuy">Ще не куплено</mat-slide-toggle>
+
+  <div style="margin-top: 2rem">
+    <button mat-flat-button color="primary" (click)="save()">
+      <mat-icon>shopping_cart</mat-icon> Зберегти
+    </button>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+
+<p>Отриманий ID: {{ itemId }}</p>
+
+
+
+<div *ngIf="selectedProduct">
+  <h2>{{ selectedProduct.name }}</h2>
+  <p>Тип: {{ getTypeName(selectedProduct.type) }}</p>
+  <p>Кількість: {{ selectedProduct.quantity }}</p>
+  <p>Статус<mat-icon [ngClass]="selectedProduct.toBuy ? 'red' : 'green'" [fontIcon]="selectedProduct.toBuy ? 'highlight_off' : 'check_circle_outline'"></mat-icon></p>
+  <p>Створено: {{ selectedProduct.createdAt | date: 'short' }}</p>
+  <mat-icon [fontIcon]="icons[selectedProduct.type]"></mat-icon>
+</div>
